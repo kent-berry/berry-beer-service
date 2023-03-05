@@ -1,0 +1,14 @@
+com\berrybeerservice\web\controller\BeerController.class
+com\berrybeerservice\domain\Beer.class
+com\berrybeerservice\web\mappers\BeerMapperImpl.class
+com\berrybeerservice\bootstrap\BeerLoader.class
+com\berrybeerservice\web\mappers\DateMapper.class
+com\berrybeerservice\web\controller\MvcExceptionHandler.class
+com\berrybeerservice\domain\Beer$BeerBuilder.class
+com\berrybeerservice\repositories\BeerRepository.class
+com\berrybeerservice\BerryBeerServiceApplication.class
+com\berrybeerservice\web\mappers\BeerMapper.class
+com\berrybeerservice\web\model\BeerPagedList.class
+com\berrybeerservice\web\model\BeerDto$BeerDtoBuilder.class
+com\berrybeerservice\web\model\BeerDto.class
+com\berrybeerservice\web\model\BeerStyleEnum.class
