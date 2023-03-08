@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
-@RequestMapping(BeerController.API_V_1_BEER)
+@RequestMapping(BeerController.API_V1)
 @RestController
 @RequiredArgsConstructor
 public class BeerController {
@@ -23,7 +23,7 @@ public class BeerController {
 
     private final BeerService beerService;
 
-    public static final String API_V_1_BEER = "/api/v1/beer";
+    public static final String API_V1 = "/api/v1/";
 
     @GetMapping(produces = { "application/json" }, path = "beer")
     public ResponseEntity<BeerPagedList> listBeers(@RequestParam(value = "pageNumber", required = false) Integer pageNumber,
@@ -49,18 +49,22 @@ public class BeerController {
         return new ResponseEntity<>(beerList, HttpStatus.OK);
     }
 
-    @GetMapping("/{beerId}")
-    public ResponseEntity<BeerDto> getBeerById(@PathVariable("beerId") UUID beerId){
-        return new ResponseEntity<>(beerService.getBeerById(beerId), HttpStatus.OK);
+    @GetMapping("beer/{beerId}")
+    public ResponseEntity<BeerDto> getBeerById(@PathVariable("beerId") UUID beerId,
+                                               @RequestParam(value = "showInventoryOnHand", required = false) Boolean showInventoryOnHand){
+        if (showInventoryOnHand == null) {
+            showInventoryOnHand = false;
+        }
+        return new ResponseEntity<>(beerService.getBeerById(beerId, showInventoryOnHand), HttpStatus.OK);
     }
 
-    @PostMapping
+    @PostMapping(path = "beer")
     public ResponseEntity saveNewBeer(@Validated @RequestBody BeerDto beerDto){
 
         return new ResponseEntity<>(beerService.saveNewBeer(beerDto), HttpStatus.CREATED);
     }
 
-    @PutMapping("/{beerId}")
+    @PutMapping("beer/{beerId}")
     public ResponseEntity updateBeerById(@PathVariable("beerId") UUID beerId, @Validated @RequestBody BeerDto beerDto){
 
         return new ResponseEntity<>(beerService.updateBeer(beerId, beerDto), HttpStatus.NO_CONTENT);

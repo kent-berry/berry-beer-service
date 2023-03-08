@@ -15,7 +15,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import java.math.BigDecimal;
 import java.util.UUID;
 
-import static com.berrybeerservice.web.controller.BeerController.API_V_1_BEER;
+import static com.berrybeerservice.web.controller.BeerController.API_V1;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -36,9 +36,9 @@ class BeerControllerTest {
     @Test
     void getBeerById() throws Exception {
 
-        given(beerService.getBeerById(any())).willReturn(getValidBeerDto());
+        given(beerService.getBeerById(any(), any())).willReturn(getValidBeerDto());
 
-        mockMvc.perform(get(API_V_1_BEER + "/" + UUID.randomUUID().toString()).accept(MediaType.APPLICATION_JSON))
+        mockMvc.perform(get(API_V1 + "beer/" + UUID.randomUUID().toString()).accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
 
     }
@@ -51,7 +51,7 @@ class BeerControllerTest {
 
         given(beerService.saveNewBeer(any())).willReturn(getValidBeerDto());
 
-        mockMvc.perform(post(API_V_1_BEER)
+        mockMvc.perform(post(API_V1 + "beer")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(beerDtoJson))
                 .andExpect(status().isCreated());
@@ -64,7 +64,7 @@ class BeerControllerTest {
         BeerDto beerDto = getValidBeerDto();
         String beerDtoJson = objectMapper.writeValueAsString(beerDto);
 
-        mockMvc.perform(put(API_V_1_BEER + "/" + UUID.randomUUID().toString())
+        mockMvc.perform(put(API_V1 + "beer/" + UUID.randomUUID().toString())
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(beerDtoJson))
                 .andExpect(status().isNoContent());

@@ -8,6 +8,7 @@ import com.berrybeerservice.web.model.BeerDto;
 import com.berrybeerservice.web.model.BeerPagedList;
 import com.berrybeerservice.web.model.BeerStyleEnum;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
@@ -23,9 +24,9 @@ public class BeerServiceImpl implements BeerService {
     private final BeerRepository beerRepository;
     private final BeerMapper beerMapper;
 
+    @Cacheable(cacheNames = "beerListCache", condition = "#showInventoryOnHand == false")
     @Override
     public BeerPagedList listBeers(String beerName, BeerStyleEnum beerStyle, PageRequest pageRequest, Boolean showInventoryOnHand) {
-
         BeerPagedList beerPagedList;
         Page<Beer> beerPage;
 
@@ -66,9 +67,15 @@ public class BeerServiceImpl implements BeerService {
 
         return beerPagedList;
     }
+
+    @Cacheable(cacheNames = "beerCache", key = "#beerId", condition = "#showInventoryOnHand == false")
     @Override
-    public BeerDto getBeerById(UUID beerId) {
-        return beerMapper.beerToBeerDto(beerRepository.findById(beerId).orElseThrow(NotFoundException::new));
+    public BeerDto getBeerById(UUID beerId, Boolean showInventoryOnHand) {
+        if (showInventoryOnHand) {
+            return beerMapper.beerToBeerDtoWithInventory(beerRepository.findById(beerId).orElseThrow(NotFoundException::new));
+        } else {
+            return beerMapper.beerToBeerDto(beerRepository.findById(beerId).orElseThrow(NotFoundException::new));
+        }
     }
 
     @Override
