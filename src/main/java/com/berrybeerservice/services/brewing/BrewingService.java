@@ -1,4 +1,4 @@
-package com.berrybeerservice.services;
+package com.berrybeerservice.services.brewing;
 
 import com.berrybeerservice.domain.Beer;
 import com.berrybeerservice.events.BrewBeerEvent;
