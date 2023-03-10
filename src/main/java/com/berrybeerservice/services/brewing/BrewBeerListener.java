@@ -2,10 +2,10 @@ package com.berrybeerservice.services.brewing;
 
 import com.berrybeerservice.config.JmsConfig;
 import com.berrybeerservice.domain.Beer;
-import com.berrybeerservice.events.BrewBeerEvent;
-import com.berrybeerservice.events.NewInventoryEvent;
 import com.berrybeerservice.repositories.BeerRepository;
 import com.berrybeerservice.web.model.BeerDto;
+import com.common.events.BrewBeerEvent;
+import com.common.events.NewInventoryEvent;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jms.annotation.JmsListener;

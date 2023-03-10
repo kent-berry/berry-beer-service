@@ -1,0 +1,3 @@
+com\berrybeerservice\BerryBeerServiceApplicationTests.class
+com\berrybeerservice\services\inventory\BeerInventoryServiceRestTemplateImplTest.class
+com\berrybeerservice\web\controller\BeerControllerTest.class

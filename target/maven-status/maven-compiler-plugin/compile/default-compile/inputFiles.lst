@@ -1,7 +1,4 @@
-C:\Users\kentw\OneDrive\Desktop\Udemy Spring Microservices\Projects\berry-brewery-workspace\berry-beer-service\src\main\java\com\berrybeerservice\events\NewInventoryEvent.java
 C:\Users\kentw\OneDrive\Desktop\Udemy Spring Microservices\Projects\berry-brewery-workspace\berry-beer-service\src\main\java\com\berrybeerservice\web\exceptions\NotFoundException.java
-C:\Users\kentw\OneDrive\Desktop\Udemy Spring Microservices\Projects\berry-brewery-workspace\berry-beer-service\src\main\java\com\berrybeerservice\events\BeerEvent.java
-C:\Users\kentw\OneDrive\Desktop\Udemy Spring Microservices\Projects\berry-brewery-workspace\berry-beer-service\src\main\java\com\berrybeerservice\events\BrewBeerEvent.java
 C:\Users\kentw\OneDrive\Desktop\Udemy Spring Microservices\Projects\berry-brewery-workspace\berry-beer-service\src\main\java\com\berrybeerservice\web\controller\MvcExceptionHandler.java
 C:\Users\kentw\OneDrive\Desktop\Udemy Spring Microservices\Projects\berry-brewery-workspace\berry-beer-service\src\main\java\com\berrybeerservice\services\inventory\model\BeerInventoryDto.java
 C:\Users\kentw\OneDrive\Desktop\Udemy Spring Microservices\Projects\berry-brewery-workspace\berry-beer-service\src\main\java\com\berrybeerservice\repositories\BeerRepository.java
@@ -15,6 +12,8 @@ C:\Users\kentw\OneDrive\Desktop\Udemy Spring Microservices\Projects\berry-brewer
 C:\Users\kentw\OneDrive\Desktop\Udemy Spring Microservices\Projects\berry-brewery-workspace\berry-beer-service\src\main\java\com\berrybeerservice\config\JmsConfig.java
 C:\Users\kentw\OneDrive\Desktop\Udemy Spring Microservices\Projects\berry-brewery-workspace\berry-beer-service\src\main\java\com\berrybeerservice\services\inventory\BeerInventoryServiceRestTemplate.java
 C:\Users\kentw\OneDrive\Desktop\Udemy Spring Microservices\Projects\berry-brewery-workspace\berry-beer-service\src\main\java\com\berrybeerservice\domain\Beer.java
+C:\Users\kentw\OneDrive\Desktop\Udemy Spring Microservices\Projects\berry-brewery-workspace\berry-beer-service\src\main\java\com\common\events\BrewBeerEvent.java
+C:\Users\kentw\OneDrive\Desktop\Udemy Spring Microservices\Projects\berry-brewery-workspace\berry-beer-service\src\main\java\com\common\events\BeerEvent.java
 C:\Users\kentw\OneDrive\Desktop\Udemy Spring Microservices\Projects\berry-brewery-workspace\berry-beer-service\src\main\java\com\berrybeerservice\web\model\BeerDto.java
 C:\Users\kentw\OneDrive\Desktop\Udemy Spring Microservices\Projects\berry-brewery-workspace\berry-beer-service\src\main\java\com\berrybeerservice\web\mappers\DateMapper.java
 C:\Users\kentw\OneDrive\Desktop\Udemy Spring Microservices\Projects\berry-brewery-workspace\berry-beer-service\src\main\java\com\berrybeerservice\config\TaskConfig.java
@@ -23,4 +22,5 @@ C:\Users\kentw\OneDrive\Desktop\Udemy Spring Microservices\Projects\berry-brewer
 C:\Users\kentw\OneDrive\Desktop\Udemy Spring Microservices\Projects\berry-brewery-workspace\berry-beer-service\src\main\java\com\berrybeerservice\bootstrap\BeerLoader.java
 C:\Users\kentw\OneDrive\Desktop\Udemy Spring Microservices\Projects\berry-brewery-workspace\berry-beer-service\src\main\java\com\berrybeerservice\web\mappers\BeerMapperDecorator.java
 C:\Users\kentw\OneDrive\Desktop\Udemy Spring Microservices\Projects\berry-brewery-workspace\berry-beer-service\src\main\java\com\berrybeerservice\services\BeerServiceImpl.java
+C:\Users\kentw\OneDrive\Desktop\Udemy Spring Microservices\Projects\berry-brewery-workspace\berry-beer-service\src\main\java\com\common\events\NewInventoryEvent.java
 C:\Users\kentw\OneDrive\Desktop\Udemy Spring Microservices\Projects\berry-brewery-workspace\berry-beer-service\src\main\java\com\berrybeerservice\services\brewing\BrewingService.java
