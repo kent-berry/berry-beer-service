@@ -1,7 +1,7 @@
 package com.berrybeerservice.web.mappers;
 
 import com.berrybeerservice.domain.Beer;
-import com.berrybeerservice.web.model.BeerDto;
+import com.brewery.model.BeerDto;
 import org.mapstruct.DecoratedWith;
 import org.mapstruct.Mapper;
 

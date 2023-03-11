@@ -4,7 +4,7 @@ import com.berrybeerservice.domain.Beer;
 import com.berrybeerservice.repositories.BeerRepository;
 import com.berrybeerservice.services.inventory.BeerInventoryService;
 import com.berrybeerservice.web.mappers.BeerMapper;
-import com.common.events.BrewBeerEvent;
+import com.brewery.model.events.BrewBeerEvent;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jms.core.JmsTemplate;

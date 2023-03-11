@@ -1,8 +1,8 @@
 package com.berrybeerservice.web.mappers;
 
 import com.berrybeerservice.domain.Beer;
-import com.berrybeerservice.web.model.BeerDto;
-import com.berrybeerservice.web.model.BeerStyleEnum;
+import com.brewery.model.BeerDto;
+import com.brewery.model.BeerStyleEnum;
 import javax.annotation.processing.Generated;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-03-10T16:20:28-0500",
+    date = "2023-03-11T14:39:32-0500",
     comments = "version: 1.5.2.Final, compiler: javac, environment: Java 17.0.6 (Amazon.com Inc.)"
 )
 @Component
